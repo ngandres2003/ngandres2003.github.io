@@ -167,6 +167,7 @@ main{
   
 }
 
+
 .currency-table--container{
     
     width: 90%;
@@ -360,8 +361,7 @@ main{
     height: auto;
     padding: 20px 10px;
     background-color: var(--warm-black);
-    display: flex;
-    flex-direction: column;
+    margin: 0 auto;
 }
 
 .main-product-detail .product-detail--logo{
@@ -369,6 +369,7 @@ main{
     width: 40px;
     height: 25px;
     top: -10px;
+    left: calc(50% - 20px);
     align-self: center;
     background-image: url('./assets/icons/batata.svg');
     
@@ -378,7 +379,7 @@ main{
     width: 90%;
     min-width: 288px;
     height: auto;
-    margin-top: 50px;
+    margin: 50px auto 0;
     align-self: center;
     text-align: center;
     
@@ -525,7 +526,7 @@ main{
     padding: 0 15px;
     box-shadow: 0 4px 8px rgba(89,73, 30, 0.16);
     position: relative;
-    margin: 60px auto;
+    margin: 50px 8px 0;
   
     
 }
@@ -585,7 +586,7 @@ main{
     text-align: center;
     font-size: 1.2rem;
     font-weight: 500;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 .plan-card--button{
@@ -604,6 +605,10 @@ main{
     align-items: center;
 }
 
+.plan-card--button:hover{
+    background-color: var(--soft-orange);
+    cursor: pointer;
+}
 .plan-card--button span{
     width: 20px;
     height: 20px;
@@ -623,14 +628,9 @@ main{
     padding: 0 15px;
     box-shadow: 0 4px 8px rgb(31, 7, 45);
     position: relative;
-    margin: 60px auto;
     scroll-snap-align: center;
-}
-.plans-container--card__2{
-    margin-left: 50px;
-}
-.plans-container--card__3{
-    margin-right: 50px;
+    margin: 50px 8px 0;
+
 }
 
 .plans-container--card__2 .basic, .plans-container--card__3 .basic{
@@ -688,7 +688,7 @@ main{
     text-align: center;
     font-size: 1.2rem;
     font-weight: 500;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
 
 }
 
@@ -708,6 +708,11 @@ main{
     align-items: center;
 }
 
+.plan-card--button__2:hover{
+    background-color: var(--soft-orange);
+    cursor: pointer;
+}
+
 .plan-card--button__2 span{
     width: 20px;
     height: 20px;
@@ -722,7 +727,57 @@ main{
     display: flex;
     overflow-x: scroll;
     overscroll-behavior-x: contain;
-    scroll-snap-type: x proximity;
-    gap: 30px;
+    scroll-snap-type: x proximity; 
+    margin: 0 50px;
     
+}
+
+footer{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    align-items: center;
+    justify-content:center ;
+    background-color: var(--bitcoin-orange);
+}
+
+.footer-left-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.footer-left-container ul{
+    font-size: 1.4rem;
+    color: var(--just-white);
+    list-style: none;
+   
+}
+
+.footer-left-container li{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.footer-left-container a{
+    font-weight: 500;
+    color: var(--just-white);
+    text-decoration: none;
+}
+
+.footer-right-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-right-container img{
+    width: 50px;
+    height: 50px;
+}
+
+.footer-right-container span{
+    color: var(--just-white);
 }
