@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1><a href="../index.html">Triatlón</a></h1>
+        <ul class="navbar">
+            <li><a href="">Registro</a></li>
+        </ul>
+    </header>
+
+
+    <main>
+
+        <h1>Registro</h1>
+       <p>Inscripcion de los atletas para participar en el Triatlon</p>
+
+        <section class="registro-container">
+
+            
+
+            <div class="formulario-container">
+
+                <h2>Ingresa los datos del atleta</h2>
+                <form method="post" id="formulario">
+                    
+                    <div class="formulario__nombre">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" required>
+                    </div>
+
+                    <div class="formulario__apellido">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" required>
+                    </div>
+
+                    <div class="formulario__cedula">
+                        <label for="cedula">Cedula</label>
+                        <input type="text" id="cedula" pattern="[0-9]{1,8}" Introduce una cedula valida required>
+                    </div>
+
+                    <div class="formulario__municipio" id="texo">
+                        <label for="municipio">Municipio</label>
+                        <input type="text" id="municipio" required>
+                    </div>
+
+                    <div class="formulario__fecha">
+                        <label for="edad">Edad</label>
+                        <input type="number" min="18" max="99" id="edad" required>
+                    </div>
+
+                    <button>Enviar datos</button>
+
+                </form>
+
+            </div>
+
+            <div class="tabla-container">                  
+                        <h2>Atletas Inscritos</h2>
+                        <table class="ticket-table" id="table">                          
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>Cedula</th>
+                                    <th>Municipio</th>
+                                    <th>Edad</th>
+                                </tr>       
+                        </table>
+            </div>
+        </section>
+
+
+        <section class="simulation-container">
+
+            <h1>Verificación</h1>
+            <p>Validar la llegada de los atletas al evento por numero de cedula</p>
+
+            <div class="button-validate">
+                <input type="text" id="ValidateC">
+                <button type="button" id="ButtonC" onclick="validateInput()"> Verificar</button>
+            </div>
+
+
+            
+            <div class="tabla-container2">
+                <button type="button" class="button-start" id="start" onclick="comenzarTriatlon()">Comenzar Triatlon</button>
+                <h2>Competidores</h2>
+                <table  id="table-competition">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Cedula</th>
+                            <th>Municipio</th>
+                            <th>Edad</th>
+                            <th>I. Caminata</th>
+                            <th>F. Caminata</th>
+                            <th>I. Natación</th>
+                            <th>F. Natación</th>
+                            <th>I. Ciclismo</th>
+                            <th>F. Ciclismo</th>
+                            <th>Tiempo Final</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="order-button">
+            <button class="order" onclick="ordenarTabla()">Ordenar tabla</button>
+            </div>
+            <div class="table-results">
+                <h2>Resultados</h2>
+                <table id="results">
+                    <thead>
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Cedula</th>
+                        <th>Municipio</th>
+                        <th>Edad</th>
+                        <th>I. Caminata</th>
+                        <th>F. Caminata</th>
+                        <th>I. Natación</th>
+                        <th>F. Natación</th>
+                        <th>I. Ciclismo</th>
+                        <th>F. Ciclismo</th>
+                        <th>Tiempo Final</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                     
+                    </tbody>
+                  </table>
+                  
+            </div>
+
+        </section>
+        <section class="footer-container">
+
+            <footer class="footer">
+                <div class="waves">
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+                </div>
+                <p>&copy;2024 Triatlón de la cava | Todos los derechos reservados</p>
+            </footer>
+        </section>
+    </main>
+    <script src="./index.js"></script>
+</body>
+</html>
